@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" ckc_uipe_send_successful_emailontent="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate</title>
-    <!-- <link rel="stylesheet" href="/a4.css"> -->
+    <!-- STYLES DON'T GET APPLIED IF EXTERNAL -->
+    <!-- <link rel="stylesheet" href="/certificate.css"> -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet"> -->
@@ -26,18 +27,28 @@
             padding: 0;
         }
         
-        .container {
-            width: 100%; 
-            height: 100%; 
-            margin: 0.125rem auto;
+        .certificate {
+            display: grid;
+            grid-template-rows: 1fr 12fr 1fr;
+            margin: 0.625rem;
+            width: 100%;
+            height: 100%;
+            position: absolute; 
+            top: 0; 
+            left: 0;
         }
         
-        .certificate {
-            width: 95%;
-            height: 95%;
-            display: grid;
-            grid-template-rows: 1fr 10fr 1fr;
-            margin: 0 auto;
+        .left-corner-border, .right-corner-border {
+            background-color: rgb(20, 20, 169);
+            height: 1.75rem;
+            width: 1.75rem;
+        }
+        
+        .main-border {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 2px;
         }
         
         .top-border, .bottom-border, .main-content {
@@ -51,22 +62,9 @@
             align-items: end;
         }
         
-        
-        .left-corner-border, .right-corner-border {
-            background-color: rgb(20, 20, 169);
-            height: 1.75rem;
-            width: 1.75rem;
-        }
-        
-        .main-border {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            margin: 0.125rem;
-        }
-        
         .outer-border {
             border: 0.4375rem solid rgb(20, 20, 169);
+        
         }
         
         .inner-border {
@@ -74,27 +72,27 @@
             margin: 0.25rem;
         }
         
-        
         .left-border, .right-border {
-            display: flex;
-         }
+           display: flex;
+        }
         
-         .outer-main-border {
+        .outer-main-border {
             border: 0.4375rem solid rgb(20, 20, 169);
             margin: 0.125rem;
         }
         
         .inner-main-border {
             border: 0.1875rem solid rgb(20, 20, 169);
-            margin: 0.125rem;
+            margin: 2px;
         }
         
         .certificate-content {
             border: 0.25rem solid rgb(20, 20, 169);
             margin: 0.25rem;
             text-align: center;
-            width: 91.5%;
+            width: 93.8%;
         }
+        
         
         .seal {
             height: 13.75rem;
@@ -118,7 +116,7 @@
         
         
         .certificate-text {
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
             text-align: center;
             font-family: 'Gentium Plus', sans-serif;
@@ -139,119 +137,118 @@
         }
         
         .kc_uipe_tech {
-            width: 65%;
+            width: 78%;
             z-index: -1;
-            height: 80%;
+            height: 100%;
             align-self: center;
         }
+        
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="certificate">
-            <!-- TOP BORDER ------ CERTIFICATE FLEX 1 -->
-            <div class="top-border">
-                <div class="left-corner-border"></div>
-                <div class="main-border">
-                    <div class="outer-border"></div>
-                    <div class="inner-border"></div>
-                </div>
-                <div class="right-corner-border"></div>
+<body>          
+    <div class="certificate">
+        <!-- TOP BORDER -->
+        <div class="top-border">
+            <div class="left-corner-border"></div>
+            <div class="main-border">
+                <div class="outer-border"></div>
+                <div class="inner-border"></div>
+            </div>
+            <div class="right-corner-border"></div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="main-content">
+            <!-- LEFT BORDER -->
+            <div class="left-border">
+                <div class="outer-main-border"></div>
+                <div class="inner-main-border"></div>
             </div>
 
-            <!-- CONTENT ------ CERTIFICATE FLEX 2 -->
-            <div class="main-content">
-                <!-- LEFT BORDER  ------ CONTENT FLEX 1 -->
-                <div class="left-border">
-                    <div class="outer-main-border"></div>
-                    <div class="inner-main-border"></div>
+            <div class="certificate-content">
+                <div class="header" style="width: 100%;">
+                    <img class="kc_uipe_logo" src="./uipe/uipe_logo.png">
+                    <img class="kc_uipe_tech" src="./uipe/tech.png">
                 </div>
-
-                <!-- CERTIFICATE CONTENT ------ CONTENT FLEX 2 -->
-                <div class="certificate-content">
-                    <div class="header">
-                        <img class="kc_uipe_logo" src="./uipe/uipe_logo.png">
-                        <img class="kc_uipe_tech" src="./uipe/tech.png">
+                <!-- <img src="./header.png" style="width: 100%;"> -->
+                <div>
+                    <div class="certificate-text">
+                        <p>
+                            This is to certify that
+                        </p>
+                        <p>
+                            ...................[APPLICANT].....................
+                        </p>
+                        <p>
+                            was admitted to the class of 
+                        </p>
+                        <p>
+                            ................[MEMBERSHIP CLASS].................
+                        </p>
+                        <p>
+                            of the Uganda Institution 
+                        </p>
+                        <p>
+                            of Professional Engineers
+                        </p>
+                        <p>
+                            on .................[DATE]......................
+                        </p>
+                        <p>
+                            Witness our hands and seal 
+                        </p>
+                        <p>
+                            at Kampala
+                        </p>
+                        <p>
+                            this ............. Day of ...................
+                        </p>
                     </div>
-                    <!-- <img src="./header.png" style="width: 100%;"> -->
-                    <div class="certificate-text-wrapper">
-                        <div class="certificate-text">
+                    <div class="sign-off">
+                        <div class="seal"></div>
+                        <div class="signatures">
                             <p>
-                                This is to certify that
+                                ...................................................................... 
                             </p>
                             <p>
-                                ...................[APPLICANT].....................
+                                ...................................................................... 
                             </p>
                             <p>
-                                was admitted to the class of 
-                            </p>
-                            <p>
-                                ................[MEMBERSHIP CLASS].................
-                            </p>
-                            <p>
-                                of the Uganda Institution 
-                            </p>
-                            <p>
-                                of Professional Engineers
-                            </p>
-                            <p>
-                                on .................[DATE]......................
-                            </p>
-                            <p>
-                                Witness our hands and seal 
-                            </p>
-                            <p>
-                                at Kampala
-                            </p>
-                            <p>
-                                this ............. Day of ...................
+                                ...................................................................... 
                             </p>
                         </div>
-                        <div class="sign-off">
-                            <div class="seal"></div>
-                            <div class="signatures">
-                                <p>
-                                    ...................................................................... 
-                                </p>
-                                <p>
-                                    ...................................................................... 
-                                </p>
-                                <p>
-                                    ...................................................................... 
-                                </p>
-                            </div>
-                            <div class="signatories">
-                                <p>
-                                    PRESIDENT
-                                </p>
-                                <p>
-                                    SECRETARY
-                                </p>
-                                <p>
-                                    MEMBER OF COUNCIL
-                                </p>
-                            </div>
+                        <div class="signatories">
+                            <p>
+                                PRESIDENT
+                            </p>
+                            <p>
+                                SECRETARY
+                            </p>
+                            <p>
+                                MEMBER OF COUNCIL
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                <!-- RIGHT BORDER ------ CONTENT FLEX 3 -->
-                <div class="right-border">
-                    <div class="inner-main-border"></div>
-                    <div class="outer-main-border"></div>
-                </div>
             </div>
 
-            <!-- BOTTOM BORDER ------ CERTIFICATE FLEX 3-->
-            <div class="bottom-border">
-                <div class="left-corner-border"></div>
-                <div class="main-border">
-                    <div class="inner-border"></div>
-                    <div class="outer-border"></div>
-                </div>
-                <div class="right-corner-border"></div>
+            <!-- RIGHT BORDER -->
+            <div class="right-border">
+                <div class="inner-main-border"></div>
+                <div class="outer-main-border"></div>
             </div>
-        </div>   
-    </div>
+        </div>
+
+        <!-- BOTTOM BORDER -->
+        <div class="bottom-border">
+            <div class="left-corner-border"></div>
+            <div class="main-border">
+                <div class="inner-border"></div>
+                <div class="outer-border"></div>
+            </div>
+            <div class="right-corner-border"></div>
+        </div>
+    </div>   
+</div>
 </body>
 </html>

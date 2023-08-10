@@ -38,17 +38,17 @@
 
 # Generating the PDF 
 
-## 1. Provide input and output files 
+## i. Provide input and output files 
 
 In generate_pdf.py, replace the values of input_html_file and output_pdf_file with the paths to your input HTML and provide a desirable name for your output PDF file, otherwise, leave defaults. 
 
-## Python Alias (optional)
+## ii. Python Alias (optional)
 
 ```bash 
     $ alias py=python
 ``` 
 
-## 2. Generate the PDF 
+## iii. Generate the PDF 
 
 Run with alias: 
 
@@ -62,7 +62,7 @@ Without alias:
     $ python generate_pdf.py
 ```
 
-
+## iv. Delete the generated PDF before repeating step (iii) on making changes to the input_html_file 
 
 
 
